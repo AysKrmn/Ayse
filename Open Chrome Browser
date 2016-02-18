@@ -1,0 +1,27 @@
+package chromebrowser;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Chromebrowsers {
+
+    private WebDriver driver;
+    private String baseUrl;
+
+    public static void main(String[] args) throws Exception {
+
+        Chromebrowsers myChromebrowsers = new Chromebrowsers();
+        myChromebrowsers.setUp();
+    }
+
+    public void setUp() throws Exception {
+
+        System.setProperty("webdriver.chrome.driver",
+                "C:\\chromedriver.exe");
+        driver = new ChromeDriver();
+
+        baseUrl = "https://……………..";
+        driver.get(baseUrl + "/…………..");
+    }
+
+}
